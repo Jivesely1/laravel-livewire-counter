@@ -1,22 +1,36 @@
-app = "laravel-livewire-counter"
-primary_region = "ams"
+# fly.toml app configuration file generated for laravel-livewire-counter-winter-tree-1704 on 2026-01-06T00:04:36+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'laravel-livewire-counter-winter-tree-1704'
+primary_region = 'ams'
+console_command = 'php /var/www/html/artisan tinker'
 
 [build]
+  [build.args]
+    NODE_VERSION = '18'
+    PHP_VERSION = '8.2'
+
+[env]
+  APP_ENV = 'production'
+  APP_URL = 'https://laravel-livewire-counter-winter-tree-1704.fly.dev'
+  ASSET_URL = 'https://laravel-livewire-counter-winter-tree-1704.fly.dev'
+  LOG_CHANNEL = 'stderr'
+  LOG_LEVEL = 'info'
+  LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
+  SESSION_DRIVER = 'cookie'
+  SESSION_SECURE_COOKIE = 'true'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "stop"
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
   cpus = 1
-
-[env]
-  APP_ENV = "production"
-  LOG_CHANNEL = "stderr"
-  LOG_STDERR_FORMATTER = "json"
+  memory_mb = 256
