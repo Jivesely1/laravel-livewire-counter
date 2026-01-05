@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php:*)",
+      "Bash(composer:*)",
+      "Bash(D:xamppphpphp.exe -v)",
+      "Bash(where:*)",
+      "Bash(C:ProgramDataComposerSetupbincomposer.bat --version)",
+      "Bash(\"C:\\\\ProgramData\\\\ComposerSetup\\\\bin\\\\composer.bat\" --version)",
+      "Bash(\"C:\\\\ProgramData\\\\ComposerSetup\\\\bin\\\\composer.bat\" create-project laravel/laravel .)",
+      "Bash(dir:*)",
+      "Bash(\"C:\\\\ProgramData\\\\ComposerSetup\\\\bin\\\\composer.bat\" create-project laravel/laravel . --remove-vcs)",
+      "Bash(\"C:\\\\ProgramData\\\\ComposerSetup\\\\bin\\\\composer.bat\" create-project laravel/laravel temp-laravel)",
+      "Bash(robocopy temp-laravel . /E /MOVE)",
+      "Bash(\"C:\\\\ProgramData\\\\ComposerSetup\\\\bin\\\\composer.bat\" require:*)",
+      "Bash(npm --version:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(node node_modulestailwindcsslibcli.js init -p)",
+      "Bash(node:*)",
+      "Bash(powershell -Command \"Get-ChildItem -Path temp-laravel -Force | Move-Item -Destination . -Force\")",
+      "Bash(npm run dev:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
